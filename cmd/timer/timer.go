@@ -6,11 +6,12 @@ import (
 )
 
 const (
-	workTimeMinutes  = 4 * time.Second
+	// workTimeMinutes  = 4 * time.Second
 	breakTimeMinutes = 5
 )
 
-func Timer() {
+func Timer(workTime int) {
+	workTimeMinutes := time.Duration(workTime) * time.Minute
 	fmt.Println("timer start")
 	elapsedTime := 0
 	nowTime := workTimeMinutes - (time.Duration(elapsedTime) * time.Second)
